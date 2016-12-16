@@ -1,4 +1,5 @@
 const uuid = require('uuid');
+const moment = require('moment');
 
 // this module provides volatile storage, using a `BlogPost`
 // model. We haven't learned about databases yet, so for now
@@ -22,7 +23,7 @@ const BlogPosts = {
       title: title,
       content: content,
       author: author,
-      publishDate: publishDate || Date.now()
+      publishDate: publishDate || moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
     };
     this.posts.push(post);
     return post;
