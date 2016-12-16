@@ -23,7 +23,7 @@ router.post('/', jsonParser, (req, res) => {
         let item = requiredItems[i];
         if (!(item in req.body)) {
                 console.error("Your post does not contain the required items.");
-                res.status(400).end();
+                return res.status(400).end();
             }
         }
       let post = BlogPosts.create(req.body.title, req.body.content, req.body.author);
