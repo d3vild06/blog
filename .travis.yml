@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: O48ueqeB3Hq3Ffc8JIY+HXVqUNAuogm8OLYXmXYWP7hb8DT4M7oR4SjV8E5vPTahD/H54E18LC4zuUCUek4Ti+WtplqzKicoDnieRSsZF/CGHywffFQxGOnnY+pcLg4+ER//58UBDOY935+UNcQKC6vsq9kqW0k/ysU/Wg6S22++lFd32rmCx7bNyZdJpsGJm20bqKhh9Ilg4cNe4B2YcYRfjsClfZ8lqRJNgF13EmznGaF3djORJOvkXHQu82ff8xqozb10TzhkZrs7LoNlmIsMl3abuqslwcaPLE8IlI0F0NnGbzY65frbqdfl11Uodnzgctw3UQW0XaX6jamDjWZphK/o4Cnc8EUqO28/oGNudD7vXedKKAATHIV1ekb9yi3FTppWLOEpwR/+3KjgVgngi5YS8hec1y29X0mf2gtP14DuUnDZcQttrowBcx2PHnThp+5+hBeMphHdOeLedOj2Wt4yJ0lXFPMS2+5NJF04mxKDNDUAr9CINHnfVJiWgRZcyi5mIChakaK6YjimoP7Rklih1+sJvpr2eHaQv7hM7+2X//T9oUTAX9SeuvRfmrWh5dDGosZJRiXTiybzczUUX98dsqcyZ6xDPQpkXL10KSO28fwhKnyzxsImzplTanMTUy5HYE0gaa1K9NUBOzISL1VQTESSe2zCcIqYI9M=
+  app: sheltered-ridge-28098
+  on:
+    repo: sergeant-q/blog
