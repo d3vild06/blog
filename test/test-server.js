@@ -27,11 +27,11 @@ describe('Blog Posts', function() {
     .then(function(res) {
       res.should.have.status(200);
       res.should.be.json;
-      res.body.should.be.a('array');
+      res.body.posts.should.be.a('array');
       const expectedKeys = ['id', 'title', 'content', 'author', 'publishDate'];
-      res.body.forEach(function(item) {
+      res.body.posts.forEach(function(item) {
         item.should.be.a('object');
-
+        item.should.include.keys(expectedKeys);
       })
     });
   });
