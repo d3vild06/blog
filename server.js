@@ -24,7 +24,7 @@ function runServer() {
             }
             server = app.listen(PORT, () => {
                 console.log(`Your app is listening on port ${PORT}`);
-                resolve(server);
+                resolve();
             }).on('error', err => {
                 mongoose.disconnect();
                 reject(err)
