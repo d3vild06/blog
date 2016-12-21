@@ -9,7 +9,7 @@ const {Post} = require('./models');
 // get all blog posts
 router.get('/', (req, res) => {
     Post.find({}).limit(10).exec().then(posts => {
-        res.json({
+        res.status(200).json({
             posts: posts.map(post => post.cleanAPIRes())
         });
     }).catch(err => {

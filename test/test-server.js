@@ -23,7 +23,7 @@ describe('Blog Posts', function() {
   // 3 - inspect response for object structure (verify certain keys exist)
   it('should list blog posts on GET', function() {
     return chai.request(app)
-    .get('/blog-posts')
+    .get('/posts')
     .then(function(res) {
       res.should.have.status(200);
       res.should.be.json;
