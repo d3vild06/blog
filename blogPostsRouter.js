@@ -34,7 +34,11 @@ router.post('/', jsonParser, (req, res) => {
         console.log('All fields must be filled in!');
         return res.status(400).end();
     }
-    let post = BlogPosts.create(req.body.title, req.body.content, req.body.author);
+    let post = Post.create({
+      title: req.body.title,
+      content: req.body.content,
+      author: req.body.author
+    });
     res.status(200).json(post);
 });
 
